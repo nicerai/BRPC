@@ -1,79 +1,45 @@
-
-/* Mobile-friendly styles */
+/* Mobile and tablet specific styles */
 @media (max-width: 768px) {
+    /* Navbar */
     .navbar {
-        flex-direction: column;
         position: relative;
         top: 0;
         right: 0;
+        flex-direction: column; /* Stack the nav links vertically */
+        gap: 10px;
         align-items: center;
     }
 
     .navbar a {
-        font-size: 18px;
-        padding: 8px 16px;
-    }
-
-    .header {
-        position: relative;
-        top: 20px;
-        left: 20px;
-    }
-
-    .header h1 {
-        font-size: 36px;
-    }
-
-    .header p {
+        padding: 10px;
         font-size: 18px;
     }
 
+    /* Content */
     .content {
-        margin: 80px 20px;
+        margin: 100px 20px; /* Adjust margin for mobile */
     }
 
     .verse, .details, .donation {
-        font-size: 16px;
-        margin-top: 20px;
-        max-width: 100%;
+        max-width: 100%; /* Full width for mobile */
+        font-size: 18px; /* Slightly smaller font size */
+        text-align: center; /* Center align text for mobile */
     }
 
-    .details {
-        margin-left: 0;
+    /* Details image */
+    .details img {
+        width: 80%; /* Make image smaller */
+        margin: 10px auto;
+    }
+
+    /* Donation section */
+    .donation {
+        flex-direction: column; /* Stack donation image and text vertically */
+        align-items: center;
         text-align: center;
     }
 
-    .donation {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
     .donation img {
-        max-width: 80px;
+        margin-bottom: 10px; /* Add space below the image */
+        max-width: 80px; /* Make donation image smaller */
     }
-}
-
-/* Further adjustments for very small devices (like mobile phones) */
-@media (max-width: 480px) {
-    .navbar a {
-        font-size: 16px;
-        padding: 6px 12px;
-    }
-
-    .header h1 {
-        font-size: 28px;
-    }
-
-    .header p {
-        font-size: 16px;
-    }
-
-    .verse, .details, .donation {
-        font-size: 14px;
-    }
-
-    .donation img {
-        max-width: 70px;
-    }
-}
