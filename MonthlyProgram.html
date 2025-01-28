@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Program</title>
+    <style>
+        @font-face {
+            font-family: 'Audrey-BoldOblique';
+            src: url('Audrey-BoldOblique.otf') format('opentype');
+        }
+
+        @font-face {
+            font-family: 'Audrey-Normal';
+            src: url('Audrey-Normal.otf') format('opentype');
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Audrey-Normal', sans-serif;
+            background-image: url('BRPC2.jpg');
+            background-size: 100%;
+            background-repeat: no-repeat;
+            transition: background-color 0.3s ease; /* Smooth transition for color change */
+            height: 200%; /* Allow scrolling */
+        }
+
+        /* Navigation Bar (Tabs) */
+        .navbar {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar a {
+            font-family: 'Audrey-Normal', sans-serif;
+            font-size: 20px;
+            text-decoration: none;
+            color: black;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: rgba(0, 0, 255, 0.1); /* Light blue tint on hover */
+        }
+
+        .header {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            text-align: left;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-family: 'Audrey-BoldOblique', sans-serif;
+            font-size: 48px; /* Increased size */
+        }
+
+        .header p {
+            margin: 0;
+            font-family: 'Audrey-Normal', sans-serif;
+            font-size: 24px; /* Increased size */
+        }
+
+        .blue-hue {
+            background-color: rgba(0, 0, 255, 0.1); /* Light blue tint */
+        }
+
+         /* Image Styling */
+         .february-image {
+            margin-top: 200px; /* Buffer from the top */
+            margin-left: 300px; /* Buffer from the left */
+            width: 60%; /* Adjust width as needed */
+            max-width: 4000px; /* Optional: Set a max-width */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar (Tabs) -->
+    <div class="navbar">
+        <a href="BRPC.html">Home</a>
+        <a href="Livestream.html">Livestream</a>
+        <a href="MonthlyProgram.html">Monthly Program</a>
+        <a href="#contact">Contact Us</a>
+    </div>
+
+    <div class="header">
+        <h1>Monthly Program</h1>
+        <p>Stay updated with the BRPC schedule for this month!</p>
+    </div>
+
+    <div>
+        <img src="February.jpg" alt="February Program" class="february-image">
+    </div>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            // Get the height of the image (background image height is based on the viewport)
+            const imageHeight = window.innerHeight; // Assuming the image covers the full viewport height
+            // Get the current scroll position
+            const scrollPosition = window.scrollY + window.innerHeight;
+
+            // If the user has scrolled past the image's bottom
+            if (scrollPosition > imageHeight) {
+                document.body.classList.add('blue-hue');
+            } else {
+                document.body.classList.remove('blue-hue');
+            }
+        });
+    </script>
+</body>
+</html>
