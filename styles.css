@@ -24,7 +24,7 @@
     /* Background Image */
     body {
         background-image: url('BRPC2.jpg'); /* Image URL */
-        background-size: cover; /* Ensure the image covers the entire screen */
+        background-size: 120%; /* Zoom in on the background image, making it larger */
         background-position: center; /* Center the image */
         background-attachment: fixed; /* Make sure the image stays in place while scrolling */
         background-repeat: no-repeat; /* Prevent repeating the background image */
