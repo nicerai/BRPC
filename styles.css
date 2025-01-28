@@ -19,7 +19,7 @@
     /* Content */
     .content {
         margin-top: 1000px;
-        margin: 100px 20px; /* Adjust margin for mobile */
+        margin: 1000px 20px; /* Adjust margin for mobile */
     }
 
     .verse, .details, .donation {
