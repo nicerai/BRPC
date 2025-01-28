@@ -1,48 +1,5 @@
 
-        @font-face {
-            font-family: 'Audrey-BoldOblique';
-            src: url('Audrey-BoldOblique.otf') format('opentype');
-        }
-
-        @font-face {
-            font-family: 'Audrey-Normal';
-            src: url('Audrey-Normal.otf') format('opentype');
-        }
-
-
-        body {
-            margin: 0;
-            font-family: 'Audrey-Normal', sans-serif;
-            background-image: url('BRPC2.jpg');
-            background-size: 100%;
-            background-repeat: no-repeat;
-            transition: background-color 0.3s ease; /* Smooth transition for color change */
-            height: 200%; /* Allow scrolling */
-        }
-
-        /* Navigation Bar (Tabs) */
-        .navbar {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            display: flex;
-            gap: 20px;
-        }
-
-        .navbar a {
-            font-family: 'Audrey-Normal', sans-serif;
-            font-size: 20px;
-            text-decoration: none;
-            color: black;
-            padding: 10px 20px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .navbar a:hover {
-            background-color: rgba(0, 0, 255, 0.1); /* Light blue tint on hover */
-        }
-
+        
         /* Mobile Navigation - Hidden by default */
         .navbar .nav-links {
             display: flex;
