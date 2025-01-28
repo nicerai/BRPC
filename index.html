@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BRPC</title>
-
     <link rel="stylesheet" href="styles.css">
-    
+
     <style>
         @font-face {
             font-family: 'Audrey-BoldOblique';
@@ -51,30 +50,64 @@
             background-color: rgba(0, 0, 255, 0.1); /* Light blue tint on hover */
         }
 
-        .header {
-            position: absolute;
-            top: 50px;
-            left: 50px;
-            text-align: left;
+        /* Mobile Navigation - Hidden by default */
+        .navbar .nav-links {
+            display: flex;
+            gap: 10px;
         }
 
-        .header h1 {
-            margin: 0;
-            font-family: 'Audrey-BoldOblique', sans-serif;
-            font-size: 48px; /* Increased size */
+        /* Mobile menu toggle */
+        .menu-icon {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
         }
 
-        .header p {
-            margin: 0;
-            font-family: 'Audrey-Normal', sans-serif;
-            font-size: 24px; /* Increased size */
+        /* Mobile-specific styles */
+        @media (max-width: 768px) {
+            .navbar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                z-index: 10;
+                padding: 10px 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .navbar .nav-links {
+                display: none; /* Hide links by default */
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+                width: 100%;
+                padding-top: 10px;
+            }
+
+            .navbar .nav-links.active {
+                display: flex; /* Show links when 'active' class is added */
+            }
+
+            .menu-icon {
+                display: block;
+            }
+
+            .navbar a {
+                padding: 10px 20px;
+                font-size: 18px;
+                text-align: center;
+                width: 100%;
+            }
         }
 
         /* Content area */
         .content {
             display: flex;
-            flex-direction: column; /* Stack the content vertically */
-            align-items: flex-start; /* Align to the left */
+            flex-direction: column;
+            align-items: flex-start;
             margin: 150px 50px;
         }
 
@@ -96,9 +129,9 @@
         }
 
         .details img {
-            max-width: 100%; /* Smaller size */
+            max-width: 100%;
             height: auto;
-            border-radius: 15px; /* Rounded corners */
+            border-radius: 15px;
         }
 
         .donation {
@@ -112,24 +145,27 @@
         }
 
         .donation img {
-            max-width: 90px; /* Make image smaller */
+            max-width: 90px;
             height: auto;
             border-radius: 10px;
         }
 
         .blue-hue {
-            background-color: rgba(246, 251, 254, 255); /* Light blue tint */
+            background-color: rgba(246, 251, 254, 255);
         }
     </style>
 </head>
 <body>
+
     <!-- Navigation Bar (Tabs) -->
     <div class="navbar">
-        <a href="#home">Home</a>
-        <a href="Livestream.html">Livestream</a>
-        <a href="MonthlyProgram.html">Monthly Program</a>
-        <a href="#contact">Contact Us</a>
-
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger icon -->
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="Livestream.html">Livestream</a>
+            <a href="MonthlyProgram.html">Monthly Program</a>
+            <a href="#contact">Contact Us</a>
+        </div>
     </div>
 
     <div class="header">
@@ -154,7 +190,6 @@
             <img src="gmaps.png" alt="Location of BRPC">
         </div>
 
-        <!-- Donation Section now under Verse and aligned with image -->
         <div class="donation">
             <img src="interac.webp" alt="Donation icon">
             <p>
@@ -165,13 +200,17 @@
     </div>
 
     <script>
+        // Function to toggle the menu visibility on mobile
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active'); // Toggle the 'active' class on click
+        }
+
+        // Scroll event to change background color based on scroll position
         window.addEventListener('scroll', function() {
-            // Get the height of the image (background image height is based on the viewport)
-            const imageHeight = window.innerHeight; // Assuming the image covers the full viewport height
-            // Get the current scroll position
+            const imageHeight = window.innerHeight;
             const scrollPosition = window.scrollY + window.innerHeight;
 
-            // If the user has scrolled past the image's bottom
             if (scrollPosition > imageHeight) {
                 document.body.classList.add('blue-hue');
             } else {
