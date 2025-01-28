@@ -67,10 +67,11 @@
             font-size: 24px; /* Increased size */
         }
 
+        /* Content area */
         .content {
             display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
+            flex-direction: column; /* Stack the content vertically */
+            align-items: flex-start; /* Align to the left */
             margin: 150px 50px;
         }
 
@@ -83,28 +84,34 @@
         }
 
         .details {
-            margin-top: 70px;
+            margin-top: -200px;
             max-width: 500px;
             font-size: 20px;
             line-height: 1.6;
             text-align: left;
-            margin-right: 20px;
+            margin-left: 1000px;
         }
 
         .details img {
-            margin-top: -10px;
-            max-width: 100%;
+            max-width: 100%; /* Smaller size */
             height: auto;
-            border-radius: 10px;
+            border-radius: 15px; /* Rounded corners */
         }
 
         .donation {
-            margin-top: 40px;
-            max-width: 500px;
+            margin-top: -100px;
             font-size: 20px;
             line-height: 1.6;
             text-align: left;
-            margin-left: -20px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .donation img {
+            max-width: 90px; /* Make image smaller */
+            height: auto;
+            border-radius: 10px;
         }
 
         .blue-hue {
@@ -143,12 +150,13 @@
             <img src="gmaps.png" alt="Location of BRPC">
         </div>
 
+        <!-- Donation Section now under Verse and aligned with image -->
         <div class="donation">
+            <img src="interac.webp" alt="Donation icon">
             <p>
                 <strong>Interested in donating to support BRPC?</strong><br>
-                We accept etransers sent to: <strong>give2brpc.gmail.com</strong>
+                We accept etransfers sent to: <strong>give2brpc@gmail.com</strong>
             </p>
-            <img src="interac.webp" alt="Location of BRPC">
         </div>
     </div>
 
