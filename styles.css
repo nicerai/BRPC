@@ -17,6 +17,7 @@
 
     /* Content */
     .content {
+        margin-top: 100px;
         margin: 100px 20px; /* Adjust margin for mobile */
     }
 
