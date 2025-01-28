@@ -2,24 +2,29 @@
 @media (max-width: 768px) {
     /* Navbar */
     .navbar {
-        position: relative;
+        position: fixed; /* Make the navbar fixed at the top */
         top: 0;
-        right: 0;
+        left: 0;
+        width: 100%; /* Full width to fit the screen */
         flex-direction: row; /* Keep the nav links horizontally aligned */
         gap: 10px;
         align-items: center;
         justify-content: center; /* Center the nav items horizontally */
+        background-color: white; /* Optional: Background color for navbar */
+        padding: 10px 0; /* Add padding to space out navbar items */
+        z-index: 10; /* Ensure the navbar stays on top of other content */
     }
 
     .navbar a {
         padding: 10px;
         font-size: 18px;
+        text-align: center; /* Center text within the nav links */
     }
 
     /* Content */
     .content {
-        margin-top: 150px; /* Increase margin to push content lower */
-        margin: 150px 20px; /* Adjust margin for mobile */
+        margin-top: 80px; /* Adjust margin to ensure content starts below navbar */
+        margin: 80px 20px; /* Adjust margin for mobile */
     }
 
     .verse, .details, .donation {
