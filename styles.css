@@ -1,0 +1,79 @@
+
+/* Mobile-friendly styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        position: relative;
+        top: 0;
+        right: 0;
+        align-items: center;
+    }
+
+    .navbar a {
+        font-size: 18px;
+        padding: 8px 16px;
+    }
+
+    .header {
+        position: relative;
+        top: 20px;
+        left: 20px;
+    }
+
+    .header h1 {
+        font-size: 36px;
+    }
+
+    .header p {
+        font-size: 18px;
+    }
+
+    .content {
+        margin: 80px 20px;
+    }
+
+    .verse, .details, .donation {
+        font-size: 16px;
+        margin-top: 20px;
+        max-width: 100%;
+    }
+
+    .details {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .donation {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .donation img {
+        max-width: 80px;
+    }
+}
+
+/* Further adjustments for very small devices (like mobile phones) */
+@media (max-width: 480px) {
+    .navbar a {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+
+    .header h1 {
+        font-size: 28px;
+    }
+
+    .header p {
+        font-size: 16px;
+    }
+
+    .verse, .details, .donation {
+        font-size: 14px;
+    }
+
+    .donation img {
+        max-width: 70px;
+    }
+}
