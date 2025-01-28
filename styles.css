@@ -21,10 +21,23 @@
         text-align: center; /* Center text within the nav links */
     }
 
+    /* Background Image */
+    body {
+        background-image: url('BRPC2.jpg'); /* Image URL */
+        background-size: cover; /* Ensure the image covers the entire screen */
+        background-position: center; /* Center the image */
+        background-attachment: fixed; /* Make sure the image stays in place while scrolling */
+        background-repeat: no-repeat; /* Prevent repeating the background image */
+        height: 100%; /* Ensure it takes full height of the viewport */
+        margin: 0; /* Remove default margin */
+    }
+
     /* Content */
     .content {
         margin-top: 80px; /* Adjust margin to ensure content starts below navbar */
         margin: 80px 20px; /* Adjust margin for mobile */
+        min-height: 100vh; /* Ensure content takes full height */
+        padding-bottom: 20px; /* Add space at the bottom to make the content scrollable */
     }
 
     .verse, .details, .donation {
@@ -36,7 +49,7 @@
 
     /* Details image */
     .details img {
-        width: 80%; /* Make image smaller */
+        width: 100%; /* Make the image fill the screen width */
         margin: 10px auto;
     }
 
