@@ -5,9 +5,10 @@
         position: relative;
         top: 0;
         right: 0;
-        flex-direction: column; /* Stack the nav links vertically */
+        flex-direction: row; /* Keep the nav links horizontally aligned */
         gap: 10px;
         align-items: center;
+        justify-content: center; /* Center the nav items horizontally */
     }
 
     .navbar a {
@@ -45,3 +46,4 @@
         margin-bottom: 10px; /* Add space below the image */
         max-width: 80px; /* Make donation image smaller */
     }
+}
