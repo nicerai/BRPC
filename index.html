@@ -65,17 +65,27 @@
     }
 
     .header {
-            position: absolute;
-            top: 50px;
-            left: 50px;
-            text-align: left;
-        }
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    text-align: left;
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack the content vertically */
+    gap: 10px; /* Space between BRPC and Bethel Romanian Pentecostal Church */
+}
 
-        .header h1 {
-            margin: 0;
-            font-family: 'Audrey-BoldOblique', sans-serif;
-            font-size: 48px; /* Increased size */
-        }
+.header h1 {
+    margin: 0;
+    font-family: 'Audrey-BoldOblique', sans-serif;
+    font-size: 48px; /* Increased size */
+}
+
+.header p {
+    margin: 0;
+    font-family: 'Audrey-Normal', sans-serif;
+    font-size: 20px; /* Adjusted size to match styling */
+}
+
     /* Mobile-specific styles */
     @media (max-width: 768px) {
         .navbar {
