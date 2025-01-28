@@ -22,6 +22,7 @@
     }
 
     .verse, .details, .donation {
+        margin-top: 100px;
         max-width: 100%; /* Full width for mobile */
         font-size: 18px; /* Slightly smaller font size */
         text-align: center; /* Center align text for mobile */
