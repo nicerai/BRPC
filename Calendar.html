@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <style>
+        @font-face {
+            font-family: 'Audrey-BoldOblique';
+            src: url('Audrey-BoldOblique.otf') format('opentype');
+        }
+
+        @font-face {
+            font-family: 'Audrey-Normal';
+            src: url('Audrey-Normal.otf') format('opentype');
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Audrey-Normal', sans-serif;
+            background-image: url('BRPC2.jpg');
+            background-size: 100%;
+            background-repeat: no-repeat;
+            transition: background-color 0.3s ease;
+            height: 200%;
+        }
+
+        .navbar {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 20px;
+            z-index: 10;
+        }
+
+        .navbar a {
+            font-family: 'Audrey-Normal', sans-serif;
+            font-size: 20px;
+            text-decoration: none;
+            color: black;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: rgba(0, 0, 255, 0.1);
+        }
+
+       /* Header in Top Left Corner */
+.header {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    text-align: left;
+}
+
+.header h1 {
+    margin: 0;
+    font-family: 'Audrey-BoldOblique', sans-serif;
+    font-size: 48px;
+}
+
+.header p {
+    margin: 0;
+    font-size: 20px;
+}
+
+        .blue-hue {
+            background-color: rgba(0, 0, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index1.html">Home</a>
+        <a href="Livestream.html">Livestream</a>
+        <a href="MonthlyProgram.html">Monthly Program</a>
+        <a href="Calendar.html">Calendar</a>
+        <a href="contact.html">Contact Us</a>
+    </div>
+
+    <div class="header">
+        <h1>Calendar</h1>
+        <p>Explore upcoming events at Bethel Romanian Pentecostal Church.</p>
+    </div>
+
+    <div style="position: relative; top: 165px; padding: 0 10%; display: flex; justify-content: center;">
+        <iframe 
+            src="https://calendar.google.com/calendar/embed?src=brpcplanning%40gmail.com&ctz=America%2FToronto" 
+            style="border: 0" 
+            width="1600" 
+            height="1000" 
+            frameborder="0" 
+            scrolling="no">
+            Admin Edit Calendar
+        </iframe>
+    </div>
+
+
+<!-- Admin Edit Link with Transparent Background -->
+<div style="position: relative; top: 165px; padding: 20px 10%; text-align: center; font-size: 20px;">
+    <div style="background-color: rgba(255, 255, 255, 0.6); padding: 15px; border-radius: 10px; display: inline-block;">
+        <p style="margin: 0;">
+            To make changes to the calendar, login here: 
+            <a href="https://calendar.google.com/calendar/u/0?cid=bmljb2xhc2hlcmFAZ21haWwuY29t" target="_blank">
+                Access BRPC Calendar
+            </a>
+        </p>
+    </div>
+</div>
+
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const imageHeight = window.innerHeight;
+            const scrollPosition = window.scrollY + window.innerHeight;
+
+            if (scrollPosition > imageHeight) {
+                document.body.classList.add('blue-hue');
+            } else {
+                document.body.classList.remove('blue-hue');
+            }
+        });
+    </script>
+</body>
+</html>

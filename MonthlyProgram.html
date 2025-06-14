@@ -74,19 +74,91 @@
          /* Image Styling */
          .february-image {
             margin-top: 200px; /* Buffer from the top */
-            margin-left: 300px; /* Buffer from the left */
+            margin-left: 500px; /* Buffer from the left */
             width: 60%; /* Adjust width as needed */
             max-width: 4000px; /* Optional: Set a max-width */
         }
+
+        .weekly-schedule {
+    position: absolute;
+    top: 250px; /* Aligns with the image */
+    left: 50px; /* Positions it to the left of the image */
+    width: 350px; /* Keeps content aligned */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Subtle background */
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Audrey-Normal', sans-serif;
+}
+
+.weekly-schedule h2 {
+    margin-top: 0;
+    font-family: 'Audrey-BoldOblique', sans-serif;
+    font-size: 24px;
+}
+
+.weekly-schedule p {
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+.monthly-announcements {
+    position: absolute;
+    top: 450px; /* Positions it below the Weekly Schedule */
+    left: 50px; /* Aligns with the Weekly Schedule */
+    width: 350px; /* Keeps content aligned */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Subtle background */
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Audrey-Normal', sans-serif;
+}
+
+.monthly-announcements h2 {
+    margin-top: 0;
+    font-family: 'Audrey-BoldOblique', sans-serif;
+    font-size: 24px;
+}
+
+.monthly-announcements p {
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+.word-of-encouragement {
+    position: absolute;
+    top: 627px; /* Positions it below the Monthly Announcements */
+    left: 50px; /* Aligns with the other sections */
+    width: 350px; /* Keeps content aligned */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Subtle background */
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Audrey-Normal', sans-serif;
+}
+
+.word-of-encouragement h2 {
+    margin-top: 0;
+    font-family: 'Audrey-BoldOblique', sans-serif;
+    font-size: 24px;
+}
+
+.word-of-encouragement p {
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+
     </style>
 </head>
 <body>
     <!-- Navigation Bar (Tabs) -->
     <div class="navbar">
-        <a href="index.html">Home</a>
+        <a href="index1.html">Home</a>
         <a href="Livestream.html">Livestream</a>
         <a href="MonthlyProgram.html">Monthly Program</a>
-        <a href="#contact">Contact Us</a>
+        <a href="Calendar.html">Calendar</a> <!-- New Calendar Link -->
+        <a href="contact.html">Contact Us</a>
     </div>
 
     <div class="header">
@@ -94,8 +166,42 @@
         <p>Stay updated with the BRPC schedule for this month!</p>
     </div>
 
+    <!-- Special Monthly Announcements Section -->
+<div class="monthly-announcements">
+    <h2>BRPC Special Monthly Announcements:</h2>
+    <p><strong>Cina Domnului -</strong> May 11th</p>
+    <p><strong>Youth Night -</strong> May 25th</p>
+
+</div>
+
+
     <div>
-        <img src="February.jpg" alt="February Program" class="february-image">
+        <img src="June2025.jpg" alt="June Program" class="february-image">
+    </div>
+
+        <!-- Weekly Schedule Section -->
+        <div class="weekly-schedule">
+            <h2>BRPC Weekly Schedule:</h2>
+            <p><strong>Sunday Morning Service:</strong> 9AM - 12PM</p>
+            <p><strong>Sunday Evening Service:</strong> 6PM - 8PM</p>
+            <p><strong>Tuesday Prayer Service:</strong> 7PM - 9PM</p>
+            <p><strong>Thursday Evening Service:</strong> 7PM - 9PM</p>
+        </div>
+    
+       
+    
+        <!-- Word of Encouragement Section -->
+    <div class="word-of-encouragement">
+        <h2>Word Of Encouragement:</h2>
+        <p><strong>Psalm 92:13-15</strong></p>
+        <p>"They are planted in the house of the</p>
+        <p>LORD; they flourish in the courts of our </p>
+        <p>God. Thet still bear fruit in old age; </p>
+        <p>they are ever full of sap and green, </p>
+        <p>to declare that the LORD is upright; </p>
+        <p>He is my rock, and there is no </p>
+        <p>unrighteousnessin Him "</p>
+        
     </div>
 
     <script>

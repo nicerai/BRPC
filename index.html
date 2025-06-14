@@ -4,192 +4,205 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BRPC</title>
-
     <link rel="stylesheet" href="styles.css">
 
-<style>
-    @font-face {
-        font-family: 'Audrey-BoldOblique';
-        src: url('Audrey-BoldOblique.otf') format('opentype');
-    }
+    <style>
+        @font-face {
+            font-family: 'Audrey-BoldOblique';
+            src: url('Audrey-BoldOblique.otf') format('opentype');
+        }
 
-    @font-face {
-        font-family: 'Audrey-Normal';
-        src: url('Audrey-Normal.otf') format('opentype');
-    }
+        @font-face {
+            font-family: 'Audrey-Normal';
+            src: url('Audrey-Normal.otf') format('opentype');
+        }
 
-    body {
-        margin: 0;
-        font-family: 'Audrey-Normal', sans-serif;
-        background-image: url('BRPC2.jpg');
-        background-size: 100%;
-        background-repeat: no-repeat;
-        transition: background-color 0.3s ease; /* Smooth transition for color change */
-        height: 200%; /* Allow scrolling */
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    /* Navigation Bar (Tabs) */
-    .navbar {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        display: flex;
-        gap: 20px;
-    }
-
-    .navbar a {
-        font-family: 'Audrey-Normal', sans-serif;
-        font-size: 20px;
-        text-decoration: none;
-        color: black;
-        padding: 10px 20px;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-    }
-
-    .navbar a:hover {
-        background-color: rgba(0, 0, 255, 0.1); /* Light blue tint on hover */
-    }
-
-    /* Mobile Navigation - Hidden by default */
-    .navbar .nav-links {
-        display: flex;
-        gap: 10px;
-    }
-
-    /* Mobile menu toggle */
-    .menu-icon {
-        display: none;
-        font-size: 30px;
-        cursor: pointer;
-    }
-
-    .header {
-    position: absolute;
-    top: 50px;
-    left: 50px;
-    text-align: left;
-    display: flex; /* Enable flexbox */
-    flex-direction: column; /* Stack the content vertically */
-    gap: 0px; /* Space between BRPC and Bethel Romanian Pentecostal Church */
-}
-
-.header h1 {
-    margin: 0;
-    font-family: 'Audrey-BoldOblique', sans-serif;
-    font-size: 48px; /* Increased size */
-}
-
-.header p {
-    margin: 0;
-    font-family: 'Audrey-Normal', sans-serif;
-    font-size: 20px; /* Adjusted size to match styling */
-}
-
-    /* Mobile-specific styles */
-    @media (max-width: 768px) {
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: white;
-            z-index: 10;
-            padding: 10px 0;
+        body {
+            font-family: 'Audrey-Normal', sans-serif;
+            background-image: url('BRPCpic2.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            transition: background-color 0.3s ease;
+            min-height: 100vh;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .navbar .nav-links {
-            display: none; /* Hide links by default */
             flex-direction: column;
-            gap: 10px;
             align-items: center;
+            padding: 2vh 2vw;
+        }
+
+        /* Update the navbar to avoid overlap */
+        .navbar {
+            display: flex;
+            gap: 0.5vw;
+            margin-top: 2vh;
+            justify-content: flex-end;
             width: 100%;
-            padding-top: 10px;
-        }
-
-        .navbar .nav-links.active {
-            display: flex; /* Show links when 'active' class is added */
-        }
-
-        .menu-icon {
-            display: block;
-        }
+            padding-right: 2vw;
+}
 
         .navbar a {
-            padding: 10px 20px;
-            font-size: 18px;
-            text-align: center;
-            width: 100%;
+            font-size: 1.5vw;
+            text-decoration: none;
+            color: black;
+            padding: 1vh 2vw;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
         }
-    }
 
-    /* Content area */
+        .navbar a:hover {
+            background-color: rgba(0, 0, 255, 0.1);
+        }
+
+        .header {
+            position: absolute;
+            top: 2vh;
+            left: 2vw;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            z-index: 10; /* Ensure it appears above other elements */
+            color: black; /* Set the text color for visibility */
+}
+
+        .header h1 {
+            font-family: 'Audrey-BoldOblique', sans-serif;
+            font-size: 4vw;
+        }
+
+        .header p {
+            font-size: 2.5vw;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2vh;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .verse, .details, .donation {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 2vh 2vw;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .verse {
+            text-align: left;
+            font-size: 2.2vw;
+            margin-top: 90vh;
+        }
+
+        .details {
+            display: flex;
+            flex-direction: column;
+            gap: 2vh;
+            font-size: 2.2vw;
+            margin-top: -97.3vh;
+        }
+
+        .donation {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 2.2vw;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        @media (min-width: 768px) {
+            .content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* Slideshow container with a large screen presence */
+.slideshow-container {
+    width: 100%;
+    max-width: 1000vw;
+    aspect-ratio: 16 / 9; /* Maintain 16:9 aspect ratio */
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1vh auto 100vh; /* Center horizontally and add vertical space */
+}
+
+/* Slideshow Image */
+.slideshow-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Slideshow Buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 2vw;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.prev { left: 2vw; }
+.next { right: 2vw; }
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 2vh 2vw;
+    overflow-x: hidden;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4vh;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 10vh;
+}
+
+@media (min-width: 768px) {
     .content {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        margin: 150px 50px;
+        grid-template-columns: 1fr 1fr;
     }
+}
 
-    .verse {
-        margin-top: 40px;
-        max-width: 500px;
-        font-size: 20px;
-        line-height: 1.6;
-        text-align: left;
-    }
-
-    .details {
-        margin-top: -200px;
-        max-width: 500px;
-        font-size: 20px;
-        line-height: 1.6;
-        text-align: left;
-        margin-left: 1000px;
-    }
-
-    .details img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 15px;
-    }
-
-    .donation {
-        margin-top: -100px;
-        font-size: 20px;
-        line-height: 1.6;
-        text-align: left;
-        display: flex;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .donation img {
-        max-width: 90px;
-        height: auto;
-        border-radius: 10px;
-    }
-
-    .blue-hue {
-        background-color: rgba(246, 251, 254, 255);
-    }
-</style>
-
+    </style>
 </head>
 <body>
-
-    <!-- Navigation Bar (Tabs) -->
     <div class="navbar">
-        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger icon -->
-        <div class="nav-links">
-            <a href="#home">Home</a>
-            <a href="Livestream.html">Livestream</a>
-            <a href="MonthlyProgram.html">Monthly Program</a>
-            <a href="#contact">Contact Us</a>
-        </div>
+        <a href="#home">Home</a>
+        <a href="Livestream.html">Livestream</a>
+        <a href="MonthlyProgram.html">Monthly Program</a>
+        <a href="#contact">Contact Us</a>
     </div>
 
     <div class="header">
@@ -198,49 +211,33 @@
     </div>
 
     <div class="content">
+        <!-- Move the slideshow to the top of the content section -->
+        <div class="slideshow-container">
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <img id="slideshow-image" src="Church1.JPG" alt="Church Image">
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+
         <div class="verse">
-            <p>
-                <strong>Salutul bisericii noastre se gaseste la Romani 15:13:</strong><br>
-                "Dumnezeul nadejdii sa va umple de toata bucuria si pacea pe care o da credinta, 
-                pentru ca, prin puterea Duhului Sfant, sa fiti tari in nadejde!"
+            <p><strong>Salutul bisericii noastre se gaseste la Romani 15:13:</strong><br>
+            "Dumnezeul nadejdii sa va umple de toata bucuria si pacea pe care o da credinta, 
+            pentru ca, prin puterea Duhului Sfant, sa fiti tari in nadejde!"
             </p>
         </div>
 
         <div class="details">
-            <p>
-                Join us for one of our services at:<br>
+            <p>Join us for one of our services at:<br>
                 <strong>5920 Baseline Rd, Windsor ON N0R 1K0</strong>
             </p>
-            <img src="gmaps.png" alt="Location of ">
+            <img src="gmaps.png" alt="Location">
         </div>
 
         <div class="donation">
-            <img src="interac.webp" alt="Donation icon">
-            <p>
-                <strong>Interested in donating to support ?</strong><br>
+            <p><strong>Interested in donating to support?</strong><br>
                 We accept etransfers sent to: <strong>give2@gmail.com</strong>
             </p>
+            <img src="interac.webp" alt="Donation icon">
         </div>
     </div>
-
-    <script>
-        // Function to toggle the menu visibility on mobile
-        function toggleMenu() {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.toggle('active'); // Toggle the 'active' class on click
-        }
-
-        // Scroll event to change background color based on scroll position
-        window.addEventListener('scroll', function() {
-            const imageHeight = window.innerHeight;
-            const scrollPosition = window.scrollY + window.innerHeight;
-
-            if (scrollPosition > imageHeight) {
-                document.body.classList.add('blue-hue');
-            } else {
-                document.body.classList.remove('blue-hue');
-            }
-        });
-    </script>
 </body>
 </html>
