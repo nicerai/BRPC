@@ -300,8 +300,8 @@
         let slideIndex = 1;
         function changeSlide(step) {
             slideIndex += step;
-            if (slideIndex > 10) slideIndex = 1;
-            if (slideIndex < 1) slideIndex = 10;
+            if (slideIndex > 7) slideIndex = 1;
+            if (slideIndex < 1) slideIndex = 7;
             document.getElementById('slideshow-image').src = `Church${slideIndex}.JPG`;
         }
         setInterval(() => { changeSlide(1); }, 3000);
