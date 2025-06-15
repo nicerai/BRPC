@@ -75,7 +75,7 @@
 
         /* Slideshow - Positioned Lower */
         .slideshow-container {
-    width: 100vw; /* Full viewport width */
+    width: 102vw; /* Full viewport width */
     aspect-ratio: 16 / 9; /* Maintains a widescreen aspect ratio */
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
@@ -221,6 +221,18 @@
     z-index: 10;
 }
 
+.bottom-bar {
+    width: 100%;
+    padding: 0px 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Same transparency as .top-bar */
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    font-family: 'Audrey-Normal', sans-serif;
+    margin-top: 50px; 
+}
+
+
         /* Responsive Design */
         @media (max-width: 768px) {
            
@@ -272,9 +284,6 @@
             <p>Bethel Romanian Pentecostal Church</p>
         </div>
     </div>
-
-
-
 
     <!-- Slideshow (Lower Position) -->
     <div class="slideshow-container">
@@ -332,4 +341,8 @@
     </script>
 
 </body>
+
+<footer class="bottom-bar">
+        <p>Bethel Romanian Pentecostal Church Windsor</p>
+    </footer>
 </html>

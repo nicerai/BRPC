@@ -81,6 +81,17 @@
     align-items: flex-start;
     z-index: 10;
 }
+
+.bottom-bar {
+    width: 100%;
+    padding: 1px 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Same transparency as .top-bar */
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    font-family: 'Audrey-Normal', sans-serif;
+    margin-top: 45px; 
+}
     </style>
 </head>
 <body>
@@ -105,7 +116,7 @@
 
 
 
-    <div style="position: relative; top: 50px; padding: 0 10%; display: flex; justify-content: center;">
+    <div style="position: relative; top: 50px; bottom: 20px; padding: 0 10%; display: flex; justify-content: center;">
         <iframe 
             src="https://calendar.google.com/calendar/embed?src=brpcplanning%40gmail.com&ctz=America%2FToronto" 
             style="border: 0" 
@@ -144,4 +155,8 @@
         });
     </script>
 </body>
+
+<footer class="bottom-bar">
+        <p>Bethel Romanian Pentecostal Church Windsor</p>
+    </footer>
 </html>
