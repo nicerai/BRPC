@@ -29,7 +29,7 @@
         .navbar {
             position: absolute;
             top: 20px;
-            right: 20px;
+            right: 40px;
             display: flex;
             gap: 20px;
         }
@@ -73,7 +73,7 @@
 
          /* Image Styling */
          .february-image {
-            margin-top: 200px; /* Buffer from the top */
+            margin-top: 50px; /* Buffer from the top */
             margin-left: 500px; /* Buffer from the left */
             width: 62%; /* Adjust width as needed */
             max-width: 4000px; /* Optional: Set a max-width */
@@ -147,24 +147,38 @@
     margin: 5px 0;
     font-size: 18px;
 }
-
+.top-bar {
+    position: relative;
+    width: 100%;
+    padding: 75px 20px;
+    background-color: rgba(0, 0, 0, 0.2); /* dark semi-transparent */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    z-index: 10;
+}
 
     </style>
 </head>
 <body>
-    <!-- Navigation Bar (Tabs) -->
-    <div class="navbar">
-        <a href="index.html">Home</a>
-        <a href="Livestream.html">Livestream</a>
-        <a href="MonthlyProgram.html">Monthly Program</a>
-        <a href="Calendar.html">Calendar</a> <!-- New Calendar Link -->
-        <a href="contact.html">Contact Us</a>
+     <!-- Top Section Wrapper -->
+    <div class="top-bar">
+        <!-- Navigation Bar -->
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <a href="Livestream.html">Livestream</a>
+            <a href="#home">Monthly Program</a>
+            <a href="Calendar.html">Calendar</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+
+        <!-- Header in Top Left Corner -->
+        <div class="header">
+            <h1>Monthly Program</h1>
+        <p>Stay updated with the BRPC schedule for this month!</p>
+        </div>
     </div>
 
-    <div class="header">
-        <h1>Monthly Program</h1>
-        <p>Stay updated with the BRPC schedule for this month!</p>
-    </div>
 
     <!-- Special Monthly Announcements Section -->
 <div class="monthly-announcements">

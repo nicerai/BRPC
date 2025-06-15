@@ -28,7 +28,7 @@
         .navbar {
             position: absolute;
             top: 20px;
-            right: 20px;
+            right: 40px;
             display: flex;
             gap: 20px;
             z-index: 10;
@@ -70,24 +70,42 @@
         .blue-hue {
             background-color: rgba(0, 0, 255, 0.1);
         }
+
+        .top-bar {
+    position: relative;
+    width: 100%;
+    padding: 75px 20px;
+    background-color: rgba(0, 0, 0, 0.2); /* dark semi-transparent */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    z-index: 10;
+}
     </style>
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <div class="navbar">
-        <a href="index.html">Home</a>
-        <a href="Livestream.html">Livestream</a>
-        <a href="MonthlyProgram.html">Monthly Program</a>
-        <a href="Calendar.html">Calendar</a>
-        <a href="contact.html">Contact Us</a>
-    </div>
+    <!-- Top Section Wrapper -->
+    <div class="top-bar">
+        <!-- Navigation Bar -->
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <a href="Livestream.html">Livestream</a>
+            <a href="MonthlyProgram.html">Monthly Program</a>
+            <a href="#home">Calendar</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
 
-    <div class="header">
-        <h1>Calendar</h1>
+        <!-- Header in Top Left Corner -->
+        <div class="header">
+                    <h1>Calendar</h1>
         <p>Explore upcoming events at Bethel Romanian Pentecostal Church.</p>
+        </div>
     </div>
 
-    <div style="position: relative; top: 165px; padding: 0 10%; display: flex; justify-content: center;">
+
+
+
+    <div style="position: relative; top: 50px; padding: 0 10%; display: flex; justify-content: center;">
         <iframe 
             src="https://calendar.google.com/calendar/embed?src=brpcplanning%40gmail.com&ctz=America%2FToronto" 
             style="border: 0" 
@@ -101,7 +119,7 @@
 
 
 <!-- Admin Edit Link with Transparent Background -->
-<div style="position: relative; top: 165px; padding: 20px 10%; text-align: center; font-size: 20px;">
+<div style="position: relative; top: 50px; padding: 20px 10%; text-align: center; font-size: 20px;">
     <div style="background-color: rgba(255, 255, 255, 0.6); padding: 15px; border-radius: 10px; display: inline-block;">
         <p style="margin: 0;">
             To make changes to the calendar , login here: 

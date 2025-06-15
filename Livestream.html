@@ -30,7 +30,7 @@
             position: absolute;
             z-index: 10;
             top: 20px;
-            right: 20px;
+            right: 40px;
             display: flex;
             gap: 20px;
         }
@@ -71,6 +71,18 @@
         .blue-hue {
             background-color: rgba(0, 0, 255, 0.1); /* Light blue tint */
         }
+
+        .top-bar {
+    position: relative;
+    width: 100%;
+    padding: 75px 20px;
+    background-color: rgba(0, 0, 0, 0.2); /* dark semi-transparent */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    z-index: 10;
+}
+
     </style>
 </head>
 <body>
@@ -107,7 +119,7 @@
         .navbar {
             position: absolute;
             top: 20px;
-            right: 20px;
+            right: -10x;
             display: flex;
             gap: 20px;
         }
@@ -129,7 +141,7 @@
         .header {
             position: absolute;
             top: 50px;
-            left: 50px;
+            left: 40px;
             text-align: left;
         }
 
@@ -159,26 +171,36 @@
             z-index: 2;
         } */
     
+            .top-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
     </style>
 </head>
 <body>
-    <!-- Navigation Bar (Tabs) -->
-    <div class="navbar">
-        <a href="index.html">Home</a>
-        <a href="Livestream.html">Livestream</a>
-        <a href="MonthlyProgram.html">Monthly Program</a>
-        <a href="Calendar.html">Calendar</a> <!-- New Calendar Link -->
-        <a href="contact.html">Contact Us</a>
+      <!-- Top Section Wrapper -->
+    <div class="top-bar">
+        <!-- Navigation Bar -->
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <a href="#home">Livestream</a>
+            <a href="MonthlyProgram.html">Monthly Program</a>
+            <a href="Calendar.html">Calendar</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+
+        <!-- Header in Top Left Corner -->
+        <div class="header">
+            <h1>Livestream</h1>
+        <p>Watch the live service of Bethel Romanian Pentecostal Church!</p>
+        </div>
     </div>
 
-    <div class="header">
-        <h1>Livestream</h1>
-        <p>Watch the live service of Bethel Romanian Pentecostal Church!</p>
-    </div>
+
 
     
     <!-- Centered Video Section -->
-<div class="content" style="padding-top: 180px; padding-left: 10%; position: relative;">
+<div class="content" style="padding-top: 50px; padding-left: 10%; position: relative;">
     <div class="video-wrapper">
         <!-- Embed YouTube Video -->
         <iframe 

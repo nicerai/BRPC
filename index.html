@@ -30,6 +30,8 @@
             align-items: center;
         }
 
+        
+
         /* Navigation Bar */
         .navbar {
             position: absolute;
@@ -83,7 +85,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    margin-top: 150px;
+    margin-top: 0px;
     max-width: 100%; /* Prevents overflow */
 }
 
@@ -208,14 +210,25 @@
     margin-top: -30px;
 }
 
+.top-bar {
+    position: relative;
+    width: 100%;
+    padding: 75px 20px;
+    background-color: rgba(0, 0, 0, 0.2); /* dark semi-transparent */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    z-index: 10;
+}
+
         /* Responsive Design */
         @media (max-width: 768px) {
-            .navbar {
-                flex-direction: column;
-                align-items: flex-end;
-                gap: 10px;
-            }
+           
 
+             .top-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
             .header {
                 left: 20px;
                 top: 20px;
@@ -242,20 +255,24 @@
 </head>
 <body>
 
-    <!-- Navigation Bar -->
-    <div class="navbar">
-        <a href="#home">Home</a>
-        <a href="Livestream.html">Livestream</a>
-        <a href="MonthlyProgram.html">Monthly Program</a>
-        <a href="Calendar.html">Calendar</a> <!-- New Calendar Link -->
-        <a href="contact.html">Contact Us</a>
+        <!-- Top Section Wrapper -->
+    <div class="top-bar">
+        <!-- Navigation Bar -->
+        <div class="navbar">
+            <a href="#home">Home</a>
+            <a href="Livestream.html">Livestream</a>
+            <a href="MonthlyProgram.html">Monthly Program</a>
+            <a href="Calendar.html">Calendar</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+
+        <!-- Header in Top Left Corner -->
+        <div class="header">
+            <img src="churchlogo.png" alt="BRPC Logo" class="logo">
+            <p>Bethel Romanian Pentecostal Church</p>
+        </div>
     </div>
 
-    <!-- Header in Top Left Corner -->
-    <div class="header">
-        <img src="churchlogo.png" alt="BRPC Logo" class="logo">
-        <p>Bethel Romanian Pentecostal Church</p>
-    </div>
 
 
 
