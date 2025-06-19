@@ -115,6 +115,28 @@
             background-color: #f0f0f0;
         }
 
+        .top-bar {
+    position: relative;
+    width: 100%;
+    padding: 75px 20px;
+    background-color: rgba(0, 0, 0, 0.2); /* dark semi-transparent */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    z-index: 10;
+}
+
+.bottom-bar {
+    width: 100%;
+    padding: 0px 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Same transparency as .top-bar */
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    font-family: 'Audrey-Normal', sans-serif;
+    margin-top: 50px; 
+}
+
         @media (max-width: 768px) {
             .navbar {
                 flex-direction: column;
@@ -142,17 +164,22 @@
 </head>
 <body>
 
-    <div class="navbar">
-        <a href="index.html">Home</a>
-        <a href="Livestream.html">Livestream</a>
-        <a href="MonthlyProgram.html">Monthly Program</a>
-        <a href="Calendar.html">Calendar</a>
-        <a href="#home">Contact Us</a>
-    </div>
+        <!-- Top Section Wrapper -->
+    <div class="top-bar">
+        <!-- Navigation Bar -->
+        <div class="navbar">
+            <a href="#home">Home</a>
+            <a href="Livestream.html">Livestream</a>
+            <a href="MonthlyProgram.html">Monthly Program</a>
+            <a href="Calendar.html">Calendar</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
 
-    <div class="header">
-         <img src="churchlogo.png" alt="BRPC Logo" class="logo">
-        <p>Bethel Romanian Pentecostal Church</p>
+        <!-- Header in Top Left Corner -->
+        <div class="header">
+            <img src="churchlogo.png" alt="BRPC Logo" class="logo">
+            <p>Bethel Romanian Pentecostal Church</p>
+        </div>
     </div>
 
     <div class="form-container">
@@ -162,4 +189,8 @@
 
 
 </body>
+
+<footer class="bottom-bar">
+        <p>Bethel Romanian Pentecostal Church Windsor</p>
+    </footer>
 </html>
